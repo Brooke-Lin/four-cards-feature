@@ -1,0 +1,150 @@
+:root{
+    --ff-sans: 'Poppins', sans-serif;
+
+    --fs-small: 1rem;
+    --fs-medium: 1.5rem;
+    --fs-large: 2rem;
+
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+
+    --clr-neutral-dark-blue: hsl(234, 12%, 34%);
+    --clr-neutral-grayish-blue: hsl(229, 6%, 66%);
+    --clr-neutral-light-gray: hsl(0, 0%, 98%);
+
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-light);
+    line-height: 1.7;
+    color: var(--clr-neutral-grayish-blue);
+}
+
+body{
+    margin: 0;
+    padding-block-end: 5rem;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    color: var(--clr-neutral-dark-blue);
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+.wrapper--narrow{
+    max-width: 550px;
+}
+
+header{
+    text-align: center;
+    margin-block: 6rem;
+}
+
+header h1{
+    font-size: var(--fs-large);
+    font-weight: var(--fw-light);
+}
+
+header h1 span{
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-dark-blue);
+}
+
+.layout-grid{
+    --gap: 2rem;
+    gap: var(--gap);
+    display: grid;
+    grid-template-areas:
+    '...two...'
+    'one two four'
+    'one three four'
+    '...three...';
+    grid-auto-columns: 1fr;
+}
+
+.layout-grid >:nth-child(1){
+    grid-area: one;
+}
+
+.layout-grid >:nth-child(2){
+    grid-area: two;
+}
+
+.layout-grid >:nth-child(3){
+    grid-area: three;
+}
+
+.layout-grid >:nth-child(4){
+    grid-area: four;
+}
+
+.card{
+    --br: 0.25rem;
+    border-top: var(--br) solid;
+    border-radius: var(--br);
+    box-shadow: 0.5rem 0.5rem 1rem;
+    padding: 1.5rem;
+}
+
+.border-cyan{
+    border-color: var(--clr-cyan);
+}
+
+.border-red{
+    border-color: var(--clr-red);
+}
+
+.border-orange{
+    border-color: var(--clr-orange);
+}
+
+.border-blue{
+    border-color: var(--clr-blue);
+}
+
+.card__title{
+    margin: 0;
+    color: var(--clr-neutral-dark-blue);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+}
+
+.card__img{
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+}
+
+@media (max-width:767px){
+    .wrapper{
+        max-width: 750px;
+    }
+    .layout-grid{
+        grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four';
+    }
+}
+
+
