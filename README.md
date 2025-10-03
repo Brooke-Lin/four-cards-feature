@@ -16,4 +16,4 @@ The goal is to create a visually appealing, mobile-friendly "four cards" feature
 
 **Live Demo Link**
 -
-https://brooke-lin.github.io/four-cards-feature/
+https://brooke-lin.github.io/WebProjects_FourCardsFeature/
